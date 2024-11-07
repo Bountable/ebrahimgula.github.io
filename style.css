@@ -18,9 +18,23 @@ html, body {
     background-color: white;
 }
 
+/* Banner Image */
+.banner {
+    width: 100%;
+    height: 30vh; /* Adjust the height as desired */
+    overflow: hidden;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the banner area */
+    display: block;
+}
+
 /* Container */
 .container {
-    height: calc(100vh - 4vw);
+    height: calc(100vh - 4vw - 30vh); /* Adjust height to account for the banner */
     width: calc(100vw - 4vw);
     margin: 2vw;
     display: flex;
@@ -40,15 +54,13 @@ html, body {
     text-transform: uppercase;
     font-size: calc(2vw + 3vh);
     line-height: 1;
-    letter-spacing: 0.1vw;
-    white-space: nowrap;
     letter-spacing: 1vw;
+    white-space: nowrap;
 }
 
 /* Middle Section */
 .middle-section {
     flex-grow: 1;
-    /* background-color: lightgray; */
 }
 
 /* Bottom Section */
@@ -64,7 +76,7 @@ html, body {
     display: flex;
     align-items: center;
     font-size: calc(1.5vw + 1.5vh);
-    line-height: 1; /* Eliminates extra space */
+    line-height: 1;
     text-transform: uppercase;
     letter-spacing: 0.6vw;
 }
@@ -83,17 +95,19 @@ html, body {
 .icons img {
     height: calc(1.5vw + 1.5vh);
     width: auto;
-    display: block; /* Prevents extra space */
-    transition: transform 0.3s ease; /* Smooth scaling effect */
-    cursor: pointer; /* Indicate the item is clickable */
+    display: block;
+    transition: transform 0.3s ease;
+    cursor: pointer;
 }
+
 .icons a img:hover {
-    transform: scale(1.3); /* Slightly increase the size by 10% */
+    transform: scale(1.3);
 }
+
 /* Media Query for Small Screens */
 @media (max-width: 768px) {
     .container {
-        height: 95vh; /* Use a specific height to ensure no overflow */
+        height: 65vh; /* Adjust for banner height on small screens */
         width: 95vw;
         margin: 2.5vw;
     }
